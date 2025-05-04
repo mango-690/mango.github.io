@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lokesh Holkar - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="fade-in">
+    <div class="header-content">
+      <div class="profile-placeholder">
+        <span>Profile Photo Placeholder</span>
+      </div>
+      <div>
+        <h1>Lokesh Holkar</h1>
+        <p>Electrical Engineering Student</p>
+        <div class="dark-toggle-wrapper">
+          <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Dark Mode</button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav-buttons">
+      <a href="about.html" class="nav-btn">About</a>
+      <a href="projects.html" class="nav-btn">Projects</a>
+      <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+  </header>
+
+  <section class="skills-section fade-in-up">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card slide-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103875.png" alt="Circuit Design" />
+        <p>Circuit Design</p>
+      </div>
+      <div class="skill-card slide-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="Arduino" />
+        <p>Arduino</p>
+      </div>
+      <div class="skill-card slide-up">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="MATLAB" />
+        <p>MATLAB</p>
+      </div>
+      <div class="skill-card slide-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/2885/2885433.png" alt="Electrical CAD" />
+        <p>Electrical CAD</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 Lokesh Holkar. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const isDark = body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    }
+  
+    // Load dark mode state on page load
+    window.onload = function () {
+      if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+      }
+    };
+  </script>  
+</body>
+</html>
+

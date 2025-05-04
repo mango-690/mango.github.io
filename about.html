@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Lokesh Holkar</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .about-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-card h2 {
+      margin-bottom: 20px;
+    }
+
+    .about-card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <section class="about-section">
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m Lokesh Holkar, an aspiring electrical engineer passionate about Arduino, MATLAB, and design using Electrical CAD tools. 
+        I’m currently developing my skills and building exciting projects as I grow my professional portfolio. 
+        This site is a reflection of my journey—thank you for stopping by!
+      </p>
+    </div>
+  </section>  
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const isDark = body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    }
+  
+    // Load dark mode state on page load
+    window.onload = function () {
+      if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+      }
+    };
+  </script>  
+</body>
+</html>
